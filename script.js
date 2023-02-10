@@ -1,14 +1,20 @@
 //your code here
 
-const express = require('express');
-const path = require('path');
+let  b =document.getElementById('btn');
 
-const app = express();
+b.addEventListener('click',() =>{
+    let n =document.getElementById("guess").value; //intput nuber
+   
+    let r =Math.random()*20;  //random nuber
+    let p =document.getElementById("respond");
 
-app.use(express.static(__dirname))
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '/main.html'));
+if(Math.abs(n,r)<= 5){ //check
+  
+p.innerText="Hot";
+}
+else{
+    p.innerText="Cold"
+}
+
 });
-
-module.exports = app;
