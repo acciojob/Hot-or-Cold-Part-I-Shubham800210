@@ -2,7 +2,7 @@
 
 let  b =document.getElementById('btn');
 
-  b.addEventListener('click',() =>{
+b.addEventListener('click',() =>{
     let n =document.getElementById("guess").value; //intput nuber
    
     let r =Math.random()*20;  //random nuber
