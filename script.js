@@ -1,20 +1,22 @@
-//your code here
+var randomNum:
+var input;
 
-let  b =document.getElementById('btn');
-
-b.addEventListener('click',() =>{
-    let n =document.getElementById("guess").value; //intput nuber
-   
-    let r =Math.random()*20;  //random nuber
-    let p =document.getElementById("respond");
-
-
-if(Math.abs(n,r)<= 5){ //check
-  
-p.innerText="Hot";
-}
-else{
-    p.innerText="Cold"
+function randomGen(){
+	randomNum = Math.floor(Math.random() * 41)-20;
+	document.getElementById("num").innerText = randomNum;
+	guessNum();
+	print();
 }
 
-});
+function guessNum(){
+	input = Number(document.getElementById("guess").value);
+	
+}
+function print() {
+	if(Math.abs(randomNum - input)<=5){
+		document.getElementById("respond").innertext = "Hot";
+	}
+	else{
+		document.getElementById("respond").innerHtml = "cold";
+	}
+}
